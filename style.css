@@ -1,0 +1,152 @@
+:root{
+    --clr-Purple-100: hsl(254, 88%, 90%);
+    --clr-Purple-500: hsl(256, 67%, 59%);
+
+    --clr-Yellow-100: hsl(31, 66%, 93%);
+    --clr-Yellow-500: hsl(39, 100%, 71%);
+
+    --clr-White: hsl(0, 0%, 100%);
+    --clr-Black: hsl(0, 0%, 7%);
+
+    --clr-bg: hsl(0, 0%, 96%);
+
+    --f-weight-400: 400;
+    --f-weight-500: 500;
+}
+
+
+html {
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--clr-bg);
+    color: var(--clr-Black);
+}
+
+p {
+    font-size: 18px;
+    font-weight: var(--f-weight-400);
+}
+
+
+/*  STYLING  */
+
+.title, .title h1{
+    margin: 1em;
+    text-align: center;
+    font-size: min(1.5em, 3em);
+    font-weight: 800;
+    color: blueviolet;
+}
+
+.card {
+    padding: 2em;
+    margin: 1em;
+    border-radius: 8px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0;
+    gap: 1em;
+}
+
+.card-content h2 {
+    font-weight: var(--f-weight-500);
+}
+
+.card-1 {
+    background-color: var(--clr-Purple-500);
+    color: var(--clr-White);  
+    text-align: center; 
+}
+
+.card-1 h2 {
+    font-size: 3em;
+}
+
+.card-1 p {
+    color: var(--clr-Yellow-100);
+}
+
+.card-1 img {
+    scale: .7;
+}
+.text-gold {
+    color: var(--clr-Yellow-500)
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.card-2 {
+    background-color: var(--clr-White);
+    padding: .5em .8em;
+}
+
+.card-3 {
+    background-color: var(--clr-Yellow-500);
+    padding: 0em;
+}
+
+.card-3 .card-content h2 {
+    font-weight: var(--f-weight-500);
+}
+.card-3 .card-content { 
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;    
+    padding: 1em .5em;
+    overflow: hidden;   
+}
+
+.card-3 .card-content img {
+   display: block;
+   position: relative; 
+   bottom: 0;
+   scale: .7;
+}
+
+/* ---------- RESET ---------------- */
+
+/* Because the default box-sizing is stupid... */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+/* #root and #__next cover my usual frameworks - Optional if you arent using one! */
+html, body, #root, #__next {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+/* Stop long words causing overflow */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
