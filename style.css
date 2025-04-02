@@ -27,7 +27,7 @@ p {
 }
 
 
-/*  STYLING  */
+/*  STYLING Cards  */
 
 .title, .title h1{
     margin: 1em;
@@ -37,29 +37,56 @@ p {
     color: blueviolet;
 }
 
-.card {
-    padding: 2em;
-    margin: 1em;
-    border-radius: 8px;
-}
-
-.card-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1em 0;
-    gap: 1em;
-}
-
 .card-content h2 {
     font-weight: var(--f-weight-500);
 }
 
-.card-1 {
+.card-1,
+.card-5 {
     background-color: var(--clr-Purple-500);
     color: var(--clr-White);  
-    text-align: center; 
 }
+.card-3,
+.card-8 {
+    background-color: var(--clr-Yellow-500);
+    padding-bottom: 0;
+}
+.card-2,
+.card-6 {
+    background-color: var(--clr-White);
+}
+
+.card-4 {
+    background-color: var(--clr-Purple-100);
+}
+
+.card-7 {
+    background-color: var(--clr-Yellow-100);
+}
+
+
+.card-1 img,
+.card-2 img,
+.card-4 img {
+    height: auto;
+    width: min(50vw, 12em);
+}
+
+.card-2 img,
+.card-4 img {
+    width: 20em;
+    height: auto;
+}
+
+.card-3 img,
+.card-5 img,
+.card-6 img,
+.card-7 img,
+.card-8 img {
+    height: auto;
+    width: min(60vw, 15em);
+}
+
 
 .card-1 h2 {
     font-size: 3em;
@@ -69,49 +96,81 @@ p {
     color: var(--clr-Yellow-100);
 }
 
-.card-1 img {
-    scale: .7;
+.card-6 h2 {
+    font-size: 2.5em;
 }
+
+.card-7 h2, .card-8 h2 {
+    font-weight: 600;
+}
+
+/* Cards customs */
+
+.card-1 .card-content { 
+    gap: 0 !important;
+}
+.card-1 img {
+    padding-top: 1em;
+}
+.card-3 {
+    padding-bottom: 0em !important;
+}   
+
+.card-5 .card-content {
+    width: min(70vw, 20em);
+}
+
+/* Utilities */
+
+.text-align-left {
+    text-align: left;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.align-center {
+    align-items: center !important;
+}
+
+.align-self-center{ 
+    align-self: center !important;
+}
+
 .text-gold {
-    color: var(--clr-Yellow-500)
+    color: var(--clr-Yellow-500);
+}
+
+.text-purple {
+    color: var(--clr-Purple-500);
 }
 
 .text-italic {
     font-style: italic;
 }
 
-.card-2 {
-    background-color: var(--clr-White);
-    padding: .5em .8em;
+.card {
+   margin: 0 1em 0 1em;
+   padding: 1em;
+   border-radius: 1em;
 }
 
-.card-3 {
-    background-color: var(--clr-Yellow-500);
-    padding: 0em;
-}
-
-.card-3 .card-content h2 {
-    font-weight: var(--f-weight-500);
-}
-.card-3 .card-content { 
+.card-content {
     display: flex;
     flex-direction: column;
-    align-items: baseline;
-    padding: 1em 1em 0em 1em;
+    gap: 1em;
 }
 
-.card-3 .card-content img {
-   height: auto;
-   width: 13em;
+.card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-bottom: 1em;
 }
 
-.card-4 {
-    background-color: var(--clr-Purple-100);
-}
 
-.card-4 .card-content {
-    padding: 1em
-}
 /* ---------- RESET ---------------- */
 
 /* Because the default box-sizing is stupid... */
@@ -123,21 +182,16 @@ p {
   margin: 0;
 }
 
-/* #root and #__next cover my usual frameworks - Optional if you arent using one! */
-html, body, #root, #__next {
-  height: 100%;
-}
 
 body {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-
+  min-height: 100vh;
 }
 
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   margin: 0;
   padding: 0;
-  font-weight: normal;
 }
 
 /* Stop long words causing overflow */
