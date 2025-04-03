@@ -9,201 +9,105 @@
     --clr-Black: hsl(0, 0%, 7%);
 
     --clr-bg: hsl(0, 0%, 96%);
+    
 
+    --f-weight-300: 300;
     --f-weight-400: 400;
     --f-weight-500: 500;
+    --f-weight-600: 600;
+
+    --fs-default: 1.25rem;
+
+    --fs-md: 2.25rem;
+    --fs-lg: 3rem;
+    --fs-xl: 4rem;
 }
 
 
-html {
-    font-family: "DM Sans", sans-serif;
-    background-color: var(--clr-bg);
-    color: var(--clr-Black);
+@layer reset {
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    figure {
+      margin: 0;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 500;
+    }
+  
+    img {
+      max-width: 100%;
+      display: block;
+    }
 }
 
-p {
-    font-size: 18px;
-    font-weight: var(--f-weight-400);
+@layer base {
+    html {
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.3;
+    }
+  
+    body {
+      /* margin: 32px; */
+      color: var(--clr-Black);
+      font-size: var(--fs-default);
+      background: var(--clr-bg);
+    }
+  
+    h1,
+    h2 {
+      color: var(--heading-color, inherit);
+      font-size: var(--heading-font-size, var(--fs-md));
+      line-height: 1.1;
+      text-wrap: balance;
+  
+      span {
+        display: var(--heading-span-display, inline);
+        color: var(--heading-span-color, var(--black));
+        font-size: var(--heading-span-font-size, inherit);
+        font-style: var(--heading-span-style, normal);
+      }
+    }
 }
 
+@layer layout {
+    .card-container {
+        display: grid;
+        gap: 16px;
+        max-inline-size: 1200px;
+        margin-inline: auto;
 
-/*  STYLING Cards  */
+        grid-template-areas:
+        'one'
+        'two'
+        'three'
+        'four'
+        'five'
+        'six'
+        'seven'
+        'eight';
+    }
 
-.title, .title h1{
-    margin: 1em;
-    text-align: center;
-    font-size: min(1.5em, 3em);
-    font-weight: 800;
-    color: blueviolet;
-}
-
-.card-content h2 {
-    font-weight: var(--f-weight-500);
-}
-
-.card-1,
-.card-5 {
-    background-color: var(--clr-Purple-500);
-    color: var(--clr-White);  
-}
-.card-3,
-.card-8 {
-    background-color: var(--clr-Yellow-500);
-    padding-bottom: 0;
-}
-.card-2,
-.card-6 {
-    background-color: var(--clr-White);
-}
-
-.card-4 {
-    background-color: var(--clr-Purple-100);
-}
-
-.card-7 {
-    background-color: var(--clr-Yellow-100);
-}
-
-
-.card-1 img,
-.card-2 img,
-.card-4 img {
-    height: auto;
-    width: min(50vw, 12em);
-}
-
-.card-2 img,
-.card-4 img {
-    width: 20em;
-    height: auto;
-}
-
-.card-3 img,
-.card-5 img,
-.card-6 img,
-.card-7 img,
-.card-8 img {
-    height: auto;
-    width: min(60vw, 15em);
-}
-
-
-.card-1 h2 {
-    font-size: 3em;
-}
-
-.card-1 p {
-    color: var(--clr-Yellow-100);
-}
-
-.card-6 h2 {
-    font-size: 2.5em;
-}
-
-.card-7 h2, .card-8 h2 {
-    font-weight: 600;
-}
-
-/* Cards customs */
-
-.card-1 .card-content { 
-    gap: 0 !important;
-}
-.card-1 img {
-    padding-top: 1em;
-}
-.card-3 {
-    padding-bottom: 0em !important;
-}   
-
-.card-5 .card-content {
-    width: min(70vw, 20em);
-}
-
-/* Utilities */
-
-.text-align-left {
-    text-align: left;
-}
-
-.text-align-center {
-    text-align: center;
-}
-
-.align-center {
-    align-items: center !important;
-}
-
-.align-self-center{ 
-    align-self: center !important;
-}
-
-.text-gold {
-    color: var(--clr-Yellow-500);
-}
-
-.text-purple {
-    color: var(--clr-Purple-500);
-}
-
-.text-italic {
-    font-style: italic;
-}
-
-.card {
-   margin: 0 1em 0 1em;
-   padding: 1em;
-   border-radius: 1em;
-}
-
-.card-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-
-.card-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1em;
-    margin-bottom: 1em;
-}
-
-
-/* ---------- RESET ---------------- */
-
-/* Because the default box-sizing is stupid... */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-}
-
-
-body {
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  min-height: 100vh;
-}
-
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-  margin: 0;
-  padding: 0;
-}
-
-/* Stop long words causing overflow */
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-
-input, button, textarea, select {
-  font: inherit;
+    .card-container > * {
+        color: var(-card)
+    }
 }
