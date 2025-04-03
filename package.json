@@ -1,0 +1,26 @@
+{
+  "name": "bento-grid-main",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite --open",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emstoica/challenge-bento-grid-main.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emstoica/challenge-bento-grid-main/issues"
+  },
+  "homepage": "https://github.com/emstoica/challenge-bento-grid-main#readme",
+  "description": "",
+  "devDependencies": {
+    "vite": "^6.2.5"
+  }
+}
