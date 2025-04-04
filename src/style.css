@@ -191,15 +191,12 @@ p {
   padding: 1.25em;
   border-radius: 1em;
   gap: 1em;
- 
 
   overflow: clip;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-
- 
 
 }
 
