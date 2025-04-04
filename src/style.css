@@ -15,6 +15,8 @@
   --clr-Yellow-500: hsl(calc(var(--base-yellow-hue) + var(--hue-shift)), 110%, 75%);
 
   --clr-Blue-100: hsl(calc(var(--base-blue-hue) + var(--hue-shift)), 45%, 90%);
+  --clr-Blue-500: hsl(calc(var(--base-blue-hue) + var(--hue-shift)), 85%, 20%);
+  
 
   --clr-White: hsl(0, 0%, 100%);
   --clr-Black: hsl(0, 0%, 7%);
@@ -108,20 +110,22 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: max-content;
+  margin-inline: auto;
 }
 .slider {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1em;
-  max-width: 20em;
-  margin-bottom: 2em;
+  width: 100% ;
 }
 
 #title {
-  color: var(--clr-Purple-500);
+  color: var(--clr-Blue-500);
   font-size: clamp(1em, 3em, 4em);
   font-weight: 800;
+  margin-block: 20px;
   text-wrap: balance;
   text-align: center;
 }
@@ -467,6 +471,27 @@ p {
   }
 }
 
+/* Footer */
+
+footer {
+  max-inline-size: 1200px;
+  margin-inline: auto;
+  margin-block: 3em 1em;
+
+  color: rgb(0, 0, 0);
+
+  a:visited {
+    color: transparent;
+  }
+  
+  a {
+    color: black;
+  }
+
+  a:hover {
+    color: var(--clr-Purple-500);
+  }
+}
 
 /* UTILITIES */
 
