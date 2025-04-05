@@ -130,7 +130,7 @@ p {
   text-align: center;
 
   @media (min-width: 960px) {
-    margin-top: 10vw;
+    margin-top: 5vw;
   }
 }
 
